@@ -1,0 +1,15 @@
+<input type="text" (keyup)="typing($event)" />
+<table>
+  <thead [mydirective]="'blue'">
+    <th>ID</th>
+    <th>NAME</th>
+    <th>AGE</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let i of myArray | filter: 'title':fkey" (click)="openTodo(i)">
+      <td>{{ i.id }}</td>
+      <td>{{ i.title }}</td>
+      <td>{{ i.completed }}</td>
+    </tr>
+  </tbody>
+</table>
