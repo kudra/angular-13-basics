@@ -12,4 +12,9 @@ export class ApiService {
       'https://jsonplaceholder.typicode.com/todos'
     );
   }
+  getTodoApiById(id: number) {
+    return this.httpclient.get<TODO>(
+      `https://jsonplaceholder.typicode.com/todos/${id}`
+    );
+  }
 }
